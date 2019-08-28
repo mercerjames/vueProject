@@ -7,6 +7,12 @@ import Home from '@/views/home'
 import Friends from '@/views/friends'
 import Cart from '@/views/cart'
 import Search from '@/views/search'
+import NewsList from '@/views/home/news/newslist'
+import NewsInfo from '@/views/home/news/newsinfo'
+import PhotoList from '@/views/home/photos/photolist'
+import PhotoInfo from '@/views/home/photos/photoinfo'
+import GoodsList from '@/views/home/goods/goodslist'
+import GoodsInfo from '@/views/home/goods/goodsinfo'
 
 Vue.use(Router)
 
@@ -27,6 +33,30 @@ export default new Router({
     {
       path: '/search',
       component: Search
+    },
+    {
+      path: '/home/newslist',
+      component: NewsList
+    },
+    {
+      path: '/home/newsinfo/:id',
+      component: NewsInfo
+    },
+    {
+      path: '/home/photolist',
+      component: PhotoList
+    },
+    {
+      path: '/home/photoinfo/:id',
+      component: PhotoInfo
+    },
+    {
+      path: '/home/goodslist',
+      component: GoodsList
+    },
+    {
+      path: '/home/goodsinfo:id',
+      component: GoodsInfo
     }
     // {
     //   path: '/about',

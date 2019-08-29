@@ -51,10 +51,11 @@ export default {
       })
       this.thums = arr
     },
-    showImg(startPosition) {
+    showImg(index) {
+      // this.$ImagePreview(this.thums)
       this.$ImagePreview({
-        image: this.thums,
-        startPosition
+        images: this.thums,
+        startPosition: index
       })
     }
 

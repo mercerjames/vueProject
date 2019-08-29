@@ -1,8 +1,7 @@
 <template>
   <div class="goods-list">
     <!-- <h2>goodslist</h2> -->
-    <div class="goods-item" v-for="good in goods" :key="good.id">
-      <!-- <img src="http://127.0.0.1:5000/goods/images/1.jpg" alt=""> -->
+    <!-- <div class="goods-item" v-for="good in goods" :key="good.id" :to="'/home/goodsinfo/'+good.id">
       <img :src="good.img_url" alt />
       <h1 class="title">{{good.title}}</h1>
       <div class="info">
@@ -17,10 +16,24 @@
           <span>剩下{{good.stock_quantity}}件</span>
         </p>
       </div>
-    </div>
-    <!-- <router-link v-for="good in goods" :key="good.id" class="good-box">
-            <img :src="good.img_url" alt="">
-    </router-link>-->
+    </div> -->
+    <router-link  v-for="good in goods" :key="good.id" class="good-box" :to="'/home/goodsinfo/'+good.id">
+      <!-- <div class="goods-item"> -->
+        <img :src="good.img_url" alt />
+        <h1 class="title">{{good.title}}</h1>
+        <div class="info">
+          <p class="price">
+            <span>平台价格: {{good.sell_price}}</span>
+            <br>
+            <span>市场价格: <s>{{good.market_price}}</s></span>
+          </p>
+          <p class="sell">
+            <span>热卖中</span>
+            <span>剩下{{good.stock_quantity}}件</span>
+          </p>
+      </div>
+      <!-- </div> -->
+    </router-link>
   </div>
 </template>
 
@@ -57,8 +70,9 @@ export default {
 <style lang="less" scoped>
 .goods-list {
     display: flex;
-
-    .goods-item{
+    height: 1000px;
+    width: 100%;
+    .good-box{
         width: 48%;
         height: 200px;
         img{

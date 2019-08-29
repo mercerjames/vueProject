@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import {
+  Stepper,
+  Panel,
   Tag,
   Card,
   Grid, GridItem,
@@ -15,6 +17,8 @@ import {
 } from 'vant'
 
 Vue
+  .use(Stepper)
+  .use(Panel)
   .use(ImagePreview)
   .use(Tag)
   .use(Card)
@@ -32,3 +36,4 @@ const options = {
 }
 
 Vue.prototype.$Toast = Toast
+Vue.prototype.$ImagePreview = ImagePreview

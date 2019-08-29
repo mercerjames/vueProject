@@ -55,7 +55,7 @@ export default new Router({
       component: GoodsList
     },
     {
-      path: '/home/goodsinfo:id',
+      path: '/home/goodsinfo/:id',
       component: GoodsInfo
     }
     // {
